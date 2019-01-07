@@ -12,6 +12,7 @@ var Stack = function() {
 
   someInstance.pop = function() {
     counter--;
+    if (counter < 0) counter = 0;
     var bePopped = storage[counter.toString()];
     delete storage[counter.toString()];
     return bePopped;
@@ -19,11 +20,11 @@ var Stack = function() {
   };
 
   someInstance.size = function() {
-    var size = 0;
-    for (key in storage) {
-        if (storage.hasOwnProperty(key)) size++;
-    }
-    return size;
+//    var size = 0;
+//    for (var key in storage) {
+//        if (storage.hasOwnProperty(key)) size++;
+//    }
+    return counter;
   };
 
 

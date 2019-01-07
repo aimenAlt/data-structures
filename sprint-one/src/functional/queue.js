@@ -26,13 +26,12 @@ var Queue = function() {
     var keyBeingDequeued = firstInQueue();
     var beingDequeued = storage[keyBeingDequeued];
     delete storage[keyBeingDequeued];
-    console.log(beingDequeued);
     return beingDequeued;
   };
 
   someInstance.size = function() {
     var size = 0;
-    for (key in storage) {
+    for ( var key in storage) {
         if (storage.hasOwnProperty(key)) size++;
     }
     return size;
