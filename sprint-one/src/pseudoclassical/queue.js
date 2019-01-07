@@ -7,7 +7,6 @@ var Queue = function() {
 
 Queue.prototype.firstInQueue = function(){
   var smallest = this.counter;
-  console.log("firstInQueue");
   for (var key in this.queueStorage){
     
     if (parseInt(key) < smallest) smallest = parseInt(key);
@@ -36,7 +35,6 @@ Queue.prototype.size = function(){
 //  console.log(this.queueStorage);
   for (var key in this.queueStorage){
     length++;
-    console.log("size loop");
   }
   return length;
 };
